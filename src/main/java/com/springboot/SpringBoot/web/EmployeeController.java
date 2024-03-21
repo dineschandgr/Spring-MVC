@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/addnew")
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+   // @RequestMapping(value = "/", method = RequestMethod.GET)
     public String addNewEmployee(Model model) {
         Employee employee = new Employee();
         model.addAttribute("employee", employee);
