@@ -59,5 +59,12 @@ public class EmployeeController {
         return "update";
     }
 
+    @GetMapping("/deleteEmployee/{id}")
+    public String deleteEmployee(@PathVariable(value = "id") long id, Model model) {
+        employeeService.deleteViaId(id);
+        return "redirect:/";
+    }
+
+
 
 }
